@@ -1662,7 +1662,7 @@ def main():
             smb4_import_users(
                 client,
                 smb_conf_path,
-                smb4_tdb,
+                smb4_tdb, "SeTakeOwnershipPrivilege", "SeBackupPrivilege", "SeRestorePrivilege"
                 "/var/db/samba4/private/passdb.tdb"
             )
             smb4_grant_rights()
