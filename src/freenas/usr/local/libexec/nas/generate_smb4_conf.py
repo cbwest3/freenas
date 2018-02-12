@@ -420,6 +420,9 @@ def configure_idmap_ad(smb4_conf, idmap, domain):
         domain,
         idmap.idmap_ad_schema_mode
     ))
+    confset1(smb4_conf, "idmap config %s: unix_primary_group = no" % (
+        domain,
+    ))
 
 
 def configure_idmap_adex(smb4_conf, idmap, domain):
